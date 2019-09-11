@@ -4,6 +4,7 @@ const LiveValueID = "LiveValue";
 const HomeScreen = "HomeScreen";
 let time;
 let lightConfig = [];
+let currentTime = "00:00";
 
 // Ranges
 const lowestLevel = 59;
@@ -13,20 +14,19 @@ const highLevel = 359;
 const highestLevel = 600;
 
 socket.on("dataEvent", function(data) {
-  document.getElementById(LiveValueID).innerHTML = data[0];
-  updateTime();
-  updateScreenColor(data[0]);
+  document.getElementById(LiveValueID).innerHTML = data[0].value;
+  updateTime(data[0].time);
+  updateScreenColor(data[0].value);
   updateLightsColor(data);
   setNextPeriod();
 });
 
-let timeMoment = moment()
-  .set("hour", 11)
-  .set("minute", 30);
-
-function updateTime() {
-  timeMoment.add(30, "m");
-  document.getElementById(timeID).innerHTML = timeMoment.format("h:mm a");
+function updateTime(time) {
+  const currentMnt = "09-09-2019Z" + currentTime + ":00";
+  document.getElementById(timeID).innerHTML = moment(currentMnt).format(
+    "h:mm A"
+  );
+  currentTime = time;
 }
 
 function updateScreenColor(data) {
@@ -46,11 +46,14 @@ function setColor(element, colorClass) {
 
 function updateLightsColor(data) {
   lightConfig = [];
-  data.forEach((value, index) => {
+  const values = data.map(d => d.value);
+  values.forEach((value, index) => {
     const colorClass = chooseColor(value);
-    const element = document.getElementById(`Light_${index}`);
+    if (index < 12) {
+      const element = document.getElementById(`Light_${index}`);
+      setColor(element, colorClass);
+    }
     lightConfig.push(colorClass);
-    setColor(element, colorClass);
   });
 }
 
@@ -85,6 +88,7 @@ function setNextPeriod() {
   let foundStart = false;
   let foundEnd = false;
   for (let index = 0; index < lightConfig.length; index++) {
+    const currentMnt = "09-09-2019Z" + currentTime + ":00";
     // Find the start time
     if (lightConfig[index] !== current && !foundStart) {
       foundStart = true;
@@ -93,10 +97,10 @@ function setNextPeriod() {
 
       // Set the start time
       let startMins = index * 30;
-      nextPhase.start = timeMoment
+      nextPhase.start = moment(currentMnt)
         .clone()
         .add(startMins, "m")
-        .format("h:mm");
+        .format("h:mm A");
     }
 
     // Find the end time
@@ -107,10 +111,10 @@ function setNextPeriod() {
     ) {
       foundEnd = true;
       const endMins = (+index + 1) * 30;
-      nextPhase.end = timeMoment
+      nextPhase.end = moment(currentMnt)
         .clone()
         .add(endMins, "m")
-        .format("h:mm");
+        .format("h:mm A");
     }
   }
 
