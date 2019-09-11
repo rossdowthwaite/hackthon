@@ -33,6 +33,102 @@ io.on("connection", () => {
 // refresh data
 const data = [
   {
+    time: "12:00",
+    value: 195,
+  },
+  {
+    time: "12:30",
+    value: 192,
+  },
+  {
+    time: "13:00",
+    value: 191,
+  },
+  {
+    time: "13:30",
+    value: 190,
+  },
+  {
+    time: "14:00",
+    value: 190,
+  },
+  {
+    time: "14:30",
+    value: 190,
+  },
+  {
+    time: "15:00",
+    value: 190,
+  },
+  {
+    time: "15:30",
+    value: 191,
+  },
+  {
+    time: "16:00",
+    value: 192,
+  },
+  {
+    time: "16:30",
+    value: 197,
+  },
+  {
+    time: "17:00",
+    value: 207,
+  },
+  {
+    time: "17:30",
+    value: 221,
+  },
+  {
+    time: "18:00",
+    value: 369,
+  },
+  {
+    time: "18:30",
+    value: 379,
+  },
+  {
+    time: "19:00",
+    value: 389,
+  },
+  {
+    time: "19:30",
+    value: 382,
+  },
+  {
+    time: "20:00",
+    value: 359,
+  },
+  {
+    time: "20:30",
+    value: 268,
+  },
+  {
+    time: "21:00",
+    value: 267,
+  },
+  {
+    time: "21:30",
+    value: 263,
+  },
+  {
+    time: "22:00",
+    value: 259,
+  },
+  {
+    time: "22:30",
+    value: 254,
+  },
+  {
+    time: "23:00",
+    value: 248,
+  },
+  {
+    time: "23:30",
+    value: 241,
+  },
+  {
     time: "00:00",
     value: 133,
   },
@@ -128,102 +224,6 @@ const data = [
     time: "11:30",
     value: 198,
   },
-  {
-    time: "12:00",
-    value: 195,
-  },
-  {
-    time: "12:30",
-    value: 192,
-  },
-  {
-    time: "13:00",
-    value: 191,
-  },
-  {
-    time: "13:30",
-    value: 190,
-  },
-  {
-    time: "14:00",
-    value: 190,
-  },
-  {
-    time: "14:30",
-    value: 190,
-  },
-  {
-    time: "15:00",
-    value: 190,
-  },
-  {
-    time: "15:30",
-    value: 191,
-  },
-  {
-    time: "16:00",
-    value: 192,
-  },
-  {
-    time: "16:30",
-    value: 197,
-  },
-  {
-    time: "17:00",
-    value: 207,
-  },
-  {
-    time: "17:30",
-    value: 221,
-  },
-  {
-    time: "18:00",
-    value: 235,
-  },
-  {
-    time: "18:30",
-    value: 248,
-  },
-  {
-    time: "19:00",
-    value: 257,
-  },
-  {
-    time: "19:30",
-    value: 262,
-  },
-  {
-    time: "20:00",
-    value: 266,
-  },
-  {
-    time: "20:30",
-    value: 268,
-  },
-  {
-    time: "21:00",
-    value: 267,
-  },
-  {
-    time: "21:30",
-    value: 263,
-  },
-  {
-    time: "22:00",
-    value: 259,
-  },
-  {
-    time: "22:30",
-    value: 254,
-  },
-  {
-    time: "23:00",
-    value: 248,
-  },
-  {
-    time: "23:30",
-    value: 241,
-  },
 ];
 
 // Init the app
@@ -232,7 +232,7 @@ shiftDataAndEmit();
 // Begin the timer
 setInterval(function() {
   shiftDataAndEmit();
-}, 3000);
+}, 1500);
 
 function shiftDataAndEmit() {
   const value = data[0];
