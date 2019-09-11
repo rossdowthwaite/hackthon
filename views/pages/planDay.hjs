@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ title }}</title>
+    <script src="https://kit.fontawesome.com/bf98511559.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"> </script>
+    <script src="/scripts/moment/moment.js"></script>
+    <script src="/javascripts/live-data.js"> </script>
+    <script src="/javascripts/screensaver.js"> </script>
+    <script src="/javascripts/background.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="Case" class="screen-wrapper">
+        <div id="bgUpdate" class="update-bg-button" onclick="updateBackground()"></div>
+        <div id="ScreenSaverToggle" class="screen-saver-button" onclick="toggleScreenSaver()"></div>
+        <div class='content-wrapper'>
+            <div id="ScreenSaver" class="screen-saver screen-saver--hide"></div>
+            <div class="main-screen">
+                <div class="plan-day-screen">
+                    <div class="plan-day__appliances flex">
+                        <div class="plan-day__appliance">
+                            <i class="fas fa-charging-station fa-3x"></i>
+                        </div>
+                        <div class="plan-day__appliance">
+                            <i class="fas fa-bath  fa-3x"></i>
+                        </div>
+                        <div class="plan-day__appliance plan-day__appliance--active">
+                            <i class="fas fa-socks  fa-3x"></i>
+                        </div>
+                    </div>
+                    <h2>Washing Machine</h2>
+                    <div class="plan-day__main flex">
+                        <div class="plan-day__options flex">
+                            <div class="option__title">Option 1</div>
+                            <div class="option__duration">
+                                Best 3h Slot is
+                            </div>
+                            <div class="option__timeframe">
+                                12:00pm - 3:00pm
+                            </div>
+                        </div>
+                        <div class="plan-day__options flex">
+                            <div class="option__title">Option 2</div>
+                            <div class="option__duration">
+                                2nd Best 3h Slot is
+                            </div>
+                            <div class="option__timeframe">
+                                6:00am - 9:00pm
+                            </div>
+                        </div>
+                        <div class="plan-day__options flex">
+                            <div class="option__title">Option 3</div>
+                            <div class="option__duration">
+                                3rd Best 3h Slot is
+                            </div>
+                            <div class="option__timeframe">
+                                12:00am - 3:00am
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan-day__buttons flex">
+                        <div class="plan-day__button">
+                            REMIND ME
+                        </div>
+                        <div class="plan-day__button">
+                            AUTOMATE
+                        </div>
+                        <div class="plan-day__button">
+                            VIEW SCHEDULE
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <a href="/" class="nav__item">
+                    <i class="fab fa-fort-awesome fa-5x"></i>
+                </a>
+                <a href="/usage" class="nav__item">
+                    <i class="fas fa-chart-bar fa-5x"></i>
+                </a>
+                <a href="/integrations" class="nav__item   nav__item--active">
+                    <i class="fas fa-blender fa-4x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="light-bar">
+            <!-- light-bar -->
+            <div class="light-bar__light-container">
+                <div id="Light_0" class="light-bar__light light-bar__light--red">NOW</div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_1" class="light-bar__light light-bar__light--green"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_2" class="light-bar__light light-bar__light--green"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_3" class="light-bar__light light-bar__light--green"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_4" class="light-bar__light light-bar__light--red"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_5" class="light-bar__light light-bar__light--green"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_6" class="light-bar__light light-bar__light--amber"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_7" class="light-bar__light light-bar__light--amber"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_8" class="light-bar__light light-bar__light--green"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_9" class="light-bar__light light-bar__light--amber"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_10" class="light-bar__light light-bar__light--amber"></div>
+            </div>
+
+            <div class="light-bar__light-container">
+                <div id="Light_11" class="light-bar__light light-bar__light--red"></div>
+            </div>
+        </div>
+</body>
+
+</html>
