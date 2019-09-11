@@ -47,7 +47,7 @@
                             <div class="appliance__option__title">
                                 Make
                             </div>
-                            <select class="appliance__option_select" name="cars">
+                            <select class="appliance__option_select" name="make">
                                 <option value="Samsung">Samsung</option>
                                 <option value="Hotpoint">Hotpoint</option>
                                 <option value="Bosch">Bosch</option>
@@ -68,9 +68,9 @@
                             </select>
                         </div>
 
-                        <div class="flex appliance__option">
-                            <a class="setup-done" href="/plan-day">DONE</a>
-                        </div>
+                    </div>
+                    <div class="flex appliance__option">
+                        <a class="setup-done" href="/plan-day">DONE</a>
                     </div>
                 </div>
             </div>

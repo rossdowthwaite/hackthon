@@ -22,7 +22,9 @@
         <div class='content-wrapper'>
             <div id="ScreenSaver" class="screen-saver screen-saver--hide"></div>
             <div class="main-screen">
-                <div id="Usage" class="graph graph--graph" onclick="toggleGraph()"></div>
+                <div class="graph-container">
+                    <div id="Usage" class="graph graph--graph" onclick="toggleGraph()"></div>
+                </div>
             </div>
 
             <div class="navigation">

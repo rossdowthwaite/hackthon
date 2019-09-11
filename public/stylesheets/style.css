@@ -355,7 +355,8 @@ a {
   height: 20%;
   display: flex;
   align-items: center;
-  background-color: rgb(173, 206, 214);
+  background-color: rgb(66, 68, 68);
+  color: white;
 }
 
 .appliance__title__icon {
@@ -367,6 +368,7 @@ a {
 }
 
 .appliance-setup__options {
+  height: 60%;
 }
 
 .flex {
@@ -376,6 +378,7 @@ a {
 
 .appliance__option {
   padding: 15px 20px;
+  height: 20%;
 }
 
 .appliance__option__title {
@@ -446,7 +449,7 @@ a {
 }
 
 .plan-day__options:hover {
-  background-color: bisque;
+  background-color: rgb(172, 243, 172);
 }
 
 .plan-day__options--active {
@@ -458,9 +461,10 @@ a {
 }
 
 .plan-day__button {
-  flex-grow: 1;
+  flex-grow: 0;
+  flex: 1 1 0;
   margin: 10px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   background-color: black;
   color: white;
@@ -481,4 +485,23 @@ a {
 
 .graph--billing {
   background-image: url("../images/bill.png");
+}
+
+.graph-container {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.option__duration {
+  font-size: 18px;
+}
+
+.option__timeframe {
+  font-size: 25px;
+}
+
+.plan-day__title {
+  text-align: center;
+  padding-top: 15px;
 }

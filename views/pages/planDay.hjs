@@ -33,12 +33,12 @@
                             <i class="fas fa-socks  fa-3x"></i>
                         </div>
                     </div>
-                    <h2>Washing Machine</h2>
+                    <h2 class="plan-day__title">Washing Machine</h2>
                     <div class="plan-day__main flex">
                         <div class="plan-day__options flex">
                             <div class="option__title">Option 1</div>
                             <div class="option__duration">
-                                Best 3h Slot is
+                                Best 3h<br>Slot is
                             </div>
                             <div class="option__timeframe">
                                 12:00pm - 3:00pm
@@ -47,7 +47,7 @@
                         <div class="plan-day__options flex">
                             <div class="option__title">Option 2</div>
                             <div class="option__duration">
-                                2nd Best 3h Slot is
+                                2nd Best<br>3h Slot is
                             </div>
                             <div class="option__timeframe">
                                 6:00am - 9:00pm
@@ -56,7 +56,7 @@
                         <div class="plan-day__options flex">
                             <div class="option__title">Option 3</div>
                             <div class="option__duration">
-                                3rd Best 3h Slot is
+                                3rd Best<br>3h Slot is
                             </div>
                             <div class="option__timeframe">
                                 12:00am - 3:00am
